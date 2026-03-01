@@ -36,11 +36,20 @@ export async function POST(req: Request) {
       const { Resend } = await import("resend");
       const resend = new Resend(resendKey);
 
+      // Notify Yonatan
       await resend.emails.send({
         from: "Workitu Tech <onboarding@resend.dev>",
         to: notifyEmail,
         subject: `New Lead: ${name}${company ? ` from ${company}` : ""}`,
         text: `New contact form submission:\n\nName: ${name}\nEmail: ${email}\nCompany: ${company || "N/A"}\n\nMessage:\n${message}`,
+      });
+
+      // Auto-respond to the lead
+      await resend.emails.send({
+        from: "Workitu Tech <onboarding@resend.dev>",
+        to: email,
+        subject: "Thanks for reaching out — Workitu Tech",
+        text: `Hi ${name},\n\nThanks for your interest in AI automation. I've received your message and will get back to you within 24 hours.\n\nIn the meantime, you can book a free discovery call here:\n${process.env.NEXT_PUBLIC_APP_URL || "https://workitu.tech"}/book\n\nBest,\nYonatan Perlin\nWorkitu Tech`,
       });
     }
 
