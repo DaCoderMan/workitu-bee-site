@@ -13,7 +13,7 @@
   "crons": [
     {
       "path": "/api/cron/site-update",
-      "schedule": "0 * * * *"
+      "schedule": "0 8 * * *"
     }
   ]
 }
