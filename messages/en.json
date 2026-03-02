@@ -1,0 +1,72 @@
+{
+  "nav": {
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "badge1": "Free pilot project — zero risk",
+    "headline1": "AI Automation That Saves You Hours",
+    "sub1": "We audit your workflows, find where AI saves time and money, and build the solution. You just tell us if it works.",
+    "badge2": "Built by AI, managed by AI",
+    "headline2": "Your Business Runs Itself",
+    "sub2": "From lead capture to invoice generation — we automate the workflows that drain your time.",
+    "badge3": "Real results, real automation",
+    "headline3": "Stop Doing What Machines Can Do",
+    "sub3": "Every hour you spend on repetitive tasks is an hour you're not growing your business. Let's fix that.",
+    "cta": "Start Free Pilot",
+    "ctaSecondary": "See Our Work"
+  },
+  "services": {
+    "title": "How We Work",
+    "subtitle": "Simple pricing. Start free, scale when you see results.",
+    "freePilot": "Free Pilot",
+    "freePilotDesc": "Try before you buy. We automate one workflow and you tell us if it works.",
+    "freePilotBadge": "Most Popular",
+    "standard": "Standard",
+    "standardDesc": "Full implementation. We audit, design, and build your custom automation.",
+    "retainer": "Monthly Retainer",
+    "retainerDesc": "Ongoing optimization. We keep your automations running and improve them."
+  },
+  "portfolio": {
+    "title": "What We Build",
+    "subtitle": "Real projects, real automation. Here's what we've been working on."
+  },
+  "about": {
+    "title": "Built by an Automation Obsessive",
+    "bio1": "I'm Yonatan Perlin, founder of Workitu Tech. I've built 39+ automation projects — from AI agents that run businesses to workflow pipelines that save hours of manual work every day.",
+    "bio2": "My AI Chief of Staff, Bee, manages my entire operation: tasks, email, calendar, daily briefings, and even deploys code autonomously. Now I'm bringing that same capability to your business.",
+    "agents": "AI Agents",
+    "agentsDesc": "Autonomous agents that handle tasks, emails, and scheduling",
+    "workflow": "Workflow Automation",
+    "workflowDesc": "n8n flows, cron jobs, and event-driven pipelines",
+    "fullstack": "Full-Stack Development",
+    "fullstackDesc": "Web apps, APIs, dashboards, and internal tools",
+    "aiIntegration": "AI Integration",
+    "aiIntegrationDesc": "Claude, GPT, Whisper, and custom ML pipelines"
+  },
+  "contact": {
+    "title": "Let's Talk Automation",
+    "subtitle": "Tell me about the repetitive work that eats your time. I'll show you how to automate it.",
+    "name": "Your name",
+    "email": "Email",
+    "company": "Company (optional)",
+    "message": "What repetitive work do you want automated?",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent! I'll get back to you within 24 hours.",
+    "error": "Something went wrong. Please email me directly.",
+    "emailDirect": "Or email me directly at"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  },
+  "common": {
+    "free": "Free",
+    "language": "Language"
+  }
+}

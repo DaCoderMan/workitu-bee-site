@@ -7,6 +7,7 @@ import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { siteConfig } from "@/config/site";
+import { LanguageSwitcher } from "./language-switcher";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -56,6 +57,7 @@ export function Navbar() {
               {item.label}
             </button>
           ))}
+          <LanguageSwitcher />
           <Button
             variant="ghost"
             size="icon"

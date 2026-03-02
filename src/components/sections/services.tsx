@@ -1,3 +1,5 @@
+"use client";
+
 import { Check, Sparkles, Rocket, RefreshCw } from "lucide-react";
 import {
   Card,
@@ -8,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/layout/section-wrapper";
+import { FadeUp, StaggerGroup, StaggerItem, HoverScale } from "@/components/ui/motion";
 
 const tiers = [
   {
@@ -56,25 +59,28 @@ const tiers = [
 export function Services() {
   return (
     <Section id="services">
-      <div className="text-center">
-        <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-          How We Work
-        </h2>
-        <p className="mt-4 text-lg text-muted-foreground">
-          Simple pricing. Start free, scale when you see results.
-        </p>
-      </div>
+      <FadeUp>
+        <div className="text-center">
+          <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+            How We Work
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Simple pricing. Start free, scale when you see results.
+          </p>
+        </div>
+      </FadeUp>
 
-      <div className="mt-14 grid gap-6 md:grid-cols-3">
+      <StaggerGroup className="mt-14 grid gap-6 md:grid-cols-3">
         {tiers.map((tier) => (
-          <Card
-            key={tier.name}
-            className={
-              tier.badge
-                ? "relative border-primary/50 shadow-lg shadow-primary/5"
-                : ""
-            }
-          >
+          <StaggerItem key={tier.name}>
+            <HoverScale>
+              <Card
+                className={
+                  tier.badge
+                    ? "relative border-primary/50 shadow-lg shadow-primary/5"
+                    : ""
+                }
+              >
             {tier.badge && (
               <Badge className="absolute -top-3 left-4">{tier.badge}</Badge>
             )}
@@ -105,8 +111,10 @@ export function Services() {
               </ul>
             </CardContent>
           </Card>
+            </HoverScale>
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerGroup>
     </Section>
   );
 }

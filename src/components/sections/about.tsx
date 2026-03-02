@@ -1,6 +1,9 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Section } from "@/components/layout/section-wrapper";
 import { Bot, Code, Workflow, Cpu } from "lucide-react";
+import { FadeUp, StaggerGroup, StaggerItem, HoverScale } from "@/components/ui/motion";
 
 const techStack = [
   "Next.js",
@@ -44,7 +47,7 @@ export function About() {
   return (
     <Section id="about">
       <div className="grid gap-12 lg:grid-cols-2">
-        <div>
+        <FadeUp>
           <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
             Built by an Automation Obsessive
           </h2>
@@ -67,22 +70,23 @@ export function About() {
               </Badge>
             ))}
           </div>
-        </div>
+        </FadeUp>
 
-        <div className="grid gap-4 sm:grid-cols-2">
+        <StaggerGroup className="grid gap-4 sm:grid-cols-2">
           {capabilities.map((cap) => (
-            <div
-              key={cap.title}
-              className="rounded-lg border bg-card p-5 transition-colors hover:bg-accent/50"
-            >
-              <cap.icon className="mb-3 h-6 w-6 text-primary" />
-              <h3 className="font-semibold">{cap.title}</h3>
-              <p className="mt-1 text-sm text-muted-foreground">
-                {cap.description}
-              </p>
-            </div>
+            <StaggerItem key={cap.title}>
+              <HoverScale>
+                <div className="rounded-lg border bg-card p-5 transition-colors hover:bg-accent/50">
+                  <cap.icon className="mb-3 h-6 w-6 text-primary" />
+                  <h3 className="font-semibold">{cap.title}</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {cap.description}
+                  </p>
+                </div>
+              </HoverScale>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGroup>
       </div>
     </Section>
   );

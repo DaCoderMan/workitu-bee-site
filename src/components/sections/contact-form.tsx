@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Section } from "@/components/layout/section-wrapper";
+import { FadeUp } from "@/components/ui/motion";
 
 export function ContactForm() {
   const [loading, setLoading] = useState(false);
@@ -44,16 +45,19 @@ export function ContactForm() {
 
   return (
     <Section id="contact">
-      <div className="mx-auto max-w-xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
-          Let&apos;s Talk Automation
-        </h2>
-        <p className="mt-4 text-lg text-muted-foreground">
-          Tell me about the repetitive work that eats your time. I&apos;ll show
-          you how to automate it.
-        </p>
-      </div>
+      <FadeUp>
+        <div className="mx-auto max-w-xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+            Let&apos;s Talk Automation
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground">
+            Tell me about the repetitive work that eats your time. I&apos;ll show
+            you how to automate it.
+          </p>
+        </div>
+      </FadeUp>
 
+      <FadeUp delay={0.15}>
       <form
         onSubmit={handleSubmit}
         className="mx-auto mt-10 flex max-w-lg flex-col gap-4"
@@ -87,6 +91,7 @@ export function ContactForm() {
           </a>
         </p>
       </form>
+      </FadeUp>
     </Section>
   );
 }
